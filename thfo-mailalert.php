@@ -3,7 +3,7 @@
 Plugin Name: Thfo Mail Alert
 Plugin URI: http://www.thivinfo.com
 Description: Allow Visitor to subscribe to a mail alert to receive a mail when a new property is added.
-Version: 1.0.3
+Version: 1.0.4
 Author: Sébastien Serre
 Author URI: http://www.thivinfo.com
 License: GPL2
@@ -28,14 +28,33 @@ class thfo_mail_alert {
 		add_action( 'plugins_loaded', array( $this, 'thfo_load_textdomain' ) );
 		add_action( 'admin_init', array($this, 'thfo_register_admin_style') );
 		add_action( 'admin_init', array($this, 'thfo_check_theme') );
+		add_action( 'admin_init', array($this, 'thfo_update_db') );
 		add_action('admin_notice', array($this,'thfo_wpcasa_missing_notice' ));
 		add_action( 'wp_enqueue_scripts', array($this, 'thfo_register_style') );
 
 		register_activation_hook(__FILE__, array('thfo_mailalert', 'install'));
 		register_uninstall_hook(__FILE__, array('thfo_mailalert', 'uninstall'));
 
-		define('VERSION','1.0.3');
+		define( 'PLUGIN_VERSION','1.0.4' );
+		add_option('version', PLUGIN_VERSION );
 
+	}
+
+	public function thfo_add_column(){
+			global $wpdb;
+			$table_name = $wpdb->prefix . 'thfo_mailalert' ;
+			$wpdb->query( "ALTER TABLE $table_name ADD subscription DATE NOT NULL " );
+
+			update_option('version', PLUGIN_VERSION );
+		}
+
+	public function thfo_update_db() {
+		$version = get_option( 'version' );
+
+		if ( $version != PLUGIN_VERSION ) {
+
+			$this->thfo_add_column();
+		}
 	}
 
 	public function thfo_load_textdomain() {
