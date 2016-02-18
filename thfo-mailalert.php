@@ -34,6 +34,8 @@ class thfo_mail_alert {
 		register_activation_hook(__FILE__, array('thfo_mailalert', 'install'));
 		register_uninstall_hook(__FILE__, array('thfo_mailalert', 'uninstall'));
 
+		define('VERSION','1.0.3');
+
 	}
 
 	public function thfo_load_textdomain() {
