@@ -42,6 +42,7 @@ class thfo_mailalert {
 			$city  = $_POST['thfo_mailalert_city'];
 			$price = $_POST['thfo_mailalert_price'];
 			$room  = $_POST['thfo_mailalert_room'];
+			$date = current_time('mysql');
 
 			$wpdb->replace( "{$wpdb->prefix}thfo_mailalert", array(
 				'name'      => $name,
@@ -49,7 +50,8 @@ class thfo_mailalert {
 				'tel'       => $phone,
 				'city'      => $city,
 				'max_price' => $price,
-				'room'      => $room
+				'room'      => $room,
+				'subscription' => $date,
 			) );
 
 		}

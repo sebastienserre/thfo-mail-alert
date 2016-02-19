@@ -36,17 +36,19 @@ class thfo_mail_alert {
 		register_uninstall_hook(__FILE__, array('thfo_mailalert', 'uninstall'));
 
 		define( 'PLUGIN_VERSION','1.0.4' );
-		add_option('version', PLUGIN_VERSION );
+		// add_option('version', PLUGIN_VERSION );
 
 	}
 
-	public function thfo_add_column(){
-			global $wpdb;
-			$table_name = $wpdb->prefix . 'thfo_mailalert' ;
+	public function thfo_add_column() {
+		global $wpdb;
+		$table_name = $wpdb->prefix . 'thfo_mailalert';
+		$row = $wpdb->get_results( "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = $table_name AND COLUMN_NAME  = 'subscription' " );
+		if (empty($row)) {
 			$wpdb->query( "ALTER TABLE $table_name ADD subscription DATE NOT NULL " );
-
-			update_option('version', PLUGIN_VERSION );
 		}
+		update_option( 'version', PLUGIN_VERSION );
+	}
 
 	public function thfo_update_db() {
 		$version = get_option( 'version' );

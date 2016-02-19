@@ -202,6 +202,7 @@ class thfo_mailalert_admin_menu {
 
 		<table class="thfo_subscriber" >
 			<tr>
+				<th><?php _e('Date', 'thfo-mail-alert') ?></th>
 				<th><?php _e('Name', 'thfo-mail-alert') ?></th>
 				<th><?php _e('Email', 'thfo-mail-alert') ?></th>
 				<th><?php _e('Phone', 'thfo-mail-alert') ?></th>
@@ -212,8 +213,10 @@ class thfo_mailalert_admin_menu {
 			</tr>
 			<?php
 			foreach ($subscribers as $subscriber){
-				$id = $subscriber->id; ?>
+				$id = $subscriber->id;
+				$date = mysql2date('G', $subscriber->subscription, true) ?>
 				<tr>
+					<td><?php echo date_i18n('d/m/Y', $date ); ?></td>
 					<td><?php echo $subscriber->name ?></td>
 					<td><?php echo $subscriber->email ?></td>
 					<td><?php echo $subscriber->tel ?></td>
