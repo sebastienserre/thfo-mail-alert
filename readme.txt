@@ -5,8 +5,8 @@ Contributors: sebastien@thivinfo.com
 Donate link: http://paypal.me/sebastienserre
 Tags: wpcasa, update, post, mail, subscription, notifier, status, alert, translation ready
 Requires at least: 3.9
-Tested up to: 4.4.2
-Stable tag: 1.0.4
+Tested up to: 4.5
+Stable tag: 1.0.6
 License: GPL V2 or later
 
 == Description ==
@@ -38,6 +38,7 @@ use automatic upgrade
 3. Subscription widget
 
 == Changelog ==
+* 1.0.5 fix an textdomain error
 * 1.0.3 fix unsubscribe bug (an error on unsubscribe process)
 * 1.0.2 fix i18n bug
 * 1.0.1 Mail and Name are mandatory

@@ -2,9 +2,9 @@
 # This file is distributed under the same license as the Thfo Mail Alert package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Thfo Mail Alert 1.0.1\n"
+"Project-Id-Version: Thfo Mail Alert 1.0.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/thfo-mail-alert\n"
-"POT-Creation-Date: 2016-02-18 09:44:58+00:00\n"
+"POT-Creation-Date: 2016-03-29 05:48:02+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -81,31 +81,35 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: class/thfo_mailalert_admin_menu.php:205
-msgid "Name"
+msgid "Date"
 msgstr ""
 
 #: class/thfo_mailalert_admin_menu.php:206
-msgid "Email"
+msgid "Name"
 msgstr ""
 
 #: class/thfo_mailalert_admin_menu.php:207
-msgid "Phone"
+msgid "Email"
 msgstr ""
 
 #: class/thfo_mailalert_admin_menu.php:208
-msgid "City Searched"
+msgid "Phone"
 msgstr ""
 
 #: class/thfo_mailalert_admin_menu.php:209
+msgid "City Searched"
+msgstr ""
+
+#: class/thfo_mailalert_admin_menu.php:210
 msgid "Budget"
 msgstr ""
 
-#: class/thfo_mailalert_admin_menu.php:210 class/thfo_mailalert_widget.php:63
+#: class/thfo_mailalert_admin_menu.php:211 class/thfo_mailalert_widget.php:63
 msgid "Room"
 msgstr ""
 
-#: class/thfo_mailalert_admin_menu.php:211
-#: class/thfo_mailalert_admin_menu.php:231
+#: class/thfo_mailalert_admin_menu.php:212
+#: class/thfo_mailalert_admin_menu.php:234
 msgid "Delete"
 msgstr ""
 
@@ -157,11 +161,11 @@ msgstr ""
 msgid "Title:"
 msgstr ""
 
-#: thfo-mailalert.php:65
+#: thfo-mailalert.php:88
 msgid "WPCasa Framework isn't available in your installation! <br />"
 msgstr ""
 
-#: thfo-mailalert.php:66
+#: thfo-mailalert.php:89
 msgid "This plugin needs it to properly work"
 msgstr ""
 
@@ -169,9 +173,9 @@ msgstr ""
 msgid "Thfo Mail Alert"
 msgstr ""
 
-#. #-#-#-#-#  plugin.pot (Thfo Mail Alert 1.0.1)  #-#-#-#-#
+#. #-#-#-#-#  plugin.pot (Thfo Mail Alert 1.0.5)  #-#-#-#-#
 #. Plugin URI of the plugin/theme
-#. #-#-#-#-#  plugin.pot (Thfo Mail Alert 1.0.1)  #-#-#-#-#
+#. #-#-#-#-#  plugin.pot (Thfo Mail Alert 1.0.5)  #-#-#-#-#
 #. Author URI of the plugin/theme
 msgid "http://www.thivinfo.com"
 msgstr ""

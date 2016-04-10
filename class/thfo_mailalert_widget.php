@@ -49,7 +49,7 @@ class thfo_mailalert_widget extends WP_Widget {
 					<?php }
 					?>
 				</select>
-				<label for="thfo_mailalert_price"> <?php _e('Price', 'thfo_mailalert') ?></label>
+				<label for="thfo_mailalert_price"> <?php _e('Price', 'thfo-mail-alert') ?></label>
 				<select name="thfo_mailalert_price">
 					<option name="thfo_mailalert_price" value="100000">100000€</option>
 					<option name="thfo_mailalert_price" value="200000">200000€</option>
