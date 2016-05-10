@@ -71,12 +71,21 @@ class thfo_mailalert_admin_menu {
 
 		register_setting('thfo_newsletter_options', 'thfo_unsubscribe_page');
 		register_setting('thfo_newsletter_options', 'thfo_thanks_page');
+		register_setting('thfo_newsletter_options', 'thfo_max_price');
 
 
 		add_settings_field('thfo_unsubscribe_page', __('Unsubscribe Page','thfo-mail-alert'), array($this, 'option_html'), 'thfo_general_options', 'thfo_newsletter_option_section');
+		add_settings_field('thfo_max_price', __('Maximum Price','thfo-mail-alert'), array($this, 'thfo_max_price'), 'thfo_general_options', 'thfo_newsletter_option_section');
 
 
 	}
+
+	public function thfo_max_price(){
+		$max_price = get_option('thfo_max_price')?>
+		<input name="thfo_max_price" id="thfo_max_price" type="text" value="<?php if ( !empty($max_price)) : echo $max_price; endif ?>">
+		<p><?php _e('Please enter maximum price separated by a comma','thfo_mail_alert') ?></p>
+
+	<?php }
 
 	public function general_section_html(){
 		echo '<p>'.__('Select your options','thfo-mail-alert').'</p>';
