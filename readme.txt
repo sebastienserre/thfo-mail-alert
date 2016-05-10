@@ -38,6 +38,7 @@ use automatic upgrade
 3. Subscription widget
 
 == Changelog ==
+* 1.0.8 fix mail bug from 1.0.7
 * 1.0.7 add mail content in html
 * 1.0.5 fix an textdomain error
 * 1.0.3 fix unsubscribe bug (an error on unsubscribe process)

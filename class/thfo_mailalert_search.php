@@ -55,8 +55,6 @@
 
 		$result = wp_mail($recipient, $object, $content, $headers);
 
-		add_filter( 'wp_mail_content_type', 'set_content_type' );
-		function set_content_type( $content_type ) {
-			return 'text/html';
-		}
+		remove_filter( 'wp_mail_content_type', 'set_html_content_type' );
+
 	}
