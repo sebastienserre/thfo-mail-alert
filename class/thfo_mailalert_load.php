@@ -41,6 +41,7 @@ class thfo_mailalert {
 			$phone = sanitize_text_field($_POST['thfo_mailalert_phone']);
 			$city  = $_POST['thfo_mailalert_city'];
 			$price = $_POST['thfo_mailalert_price'];
+			$minprice = $_POST['thfo_mailalert_min_price'];
 			$room  = $_POST['thfo_mailalert_room'];
 			$date = current_time('mysql');
 
@@ -52,6 +53,7 @@ class thfo_mailalert {
 				'max_price' => $price,
 				'room'      => $room,
 				'subscription' => $date,
+				'min_price' => $minprice,
 			) );
 
 		}
