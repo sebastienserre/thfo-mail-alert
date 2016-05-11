@@ -42,7 +42,7 @@ class thfo_mailalert_widget extends WP_Widget {
 		//$prices = explode(', ', $prices);
 		//$prices = preg_split("/ (,|, ) /", $prices);
 		//$prices = explode(',', $prices);
-		var_dump($prices);
+		//var_dump($prices);
 		?>
 
 		<form action="" method="post">
@@ -70,13 +70,6 @@ class thfo_mailalert_widget extends WP_Widget {
 						<option name="thfo_mailalert_price" value="<?php echo $price  ?>"><?php echo $price  ?>€</option>
 					<?php }
 					?>
-
-					<!--<option name="thfo_mailalert_price" value="200000">200000€</option>
-					<option name="thfo_mailalert_price" value="300000">300000€</option>
-					<option name="thfo_mailalert_price" value="400000">400000€</option>
-					<option name="thfo_mailalert_price" value="500000">500000€</option>
-					<option name="thfo_mailalert_price" value="600000">600000€</option>
-					<option name="thfo_mailalert_price" value="700000">700000€</option>-->
 					<option name="thfo_mailalert_price" value="more"><?php _e('more', 'thfo-mail-alert') ?></option>
 				</select>
 				<label for="thfo_mailalert_room"> <?php _e('Room', 'thfo-mail-alert') ?></label>
