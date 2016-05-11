@@ -6,7 +6,7 @@ Donate link: http://paypal.me/sebastienserre
 Tags: wpcasa, update, post, mail, subscription, notifier, status, alert, translation ready
 Requires at least: 3.9
 Tested up to: 4.5
-Stable tag: 1.1.3
+Stable tag: 1.2.0
 License: GPL V2 or later
 
 == Description ==
@@ -38,7 +38,7 @@ use automatic upgrade
 3. Subscription widget
 
 == Changelog ==
-* 1.1.1 add min price choice in widget
+* 1.2.0 add min price choice in widget
 * 1.1.0 let admin choose max price
 * 1.0.8 fix mail bug from 1.0.7
 * 1.0.7 add mail content in html
