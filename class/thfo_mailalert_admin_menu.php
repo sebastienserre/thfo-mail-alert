@@ -216,7 +216,8 @@ class thfo_mailalert_admin_menu {
 				<th><?php _e('Email', 'thfo-mail-alert') ?></th>
 				<th><?php _e('Phone', 'thfo-mail-alert') ?></th>
 				<th><?php _e('City Searched', 'thfo-mail-alert') ?></th>
-				<th><?php _e('Budget', 'thfo-mail-alert') ?></th>
+				<th><?php _e('Minimum price', 'thfo-mail-alert') ?></th>
+				<th><?php _e('Maximum price', 'thfo-mail-alert') ?></th>
 				<th><?php _e('Room', 'thfo-mail-alert') ?></th>
 				<th><?php _e('Delete', 'thfo-mail-alert') ?></th>
 			</tr>
@@ -230,7 +231,8 @@ class thfo_mailalert_admin_menu {
 					<td><?php echo $subscriber->email ?></td>
 					<td><?php echo $subscriber->tel ?></td>
 					<td><?php echo $subscriber->city ?></td>
-					<td><?php echo $subscriber->max_price ?></td>
+					<td><?php echo $subscriber->min_price ?>€</td>
+					<td><?php echo $subscriber->max_price ?>€</td>
 					<td><?php echo $subscriber->room ?></td>
 
 					<td>
