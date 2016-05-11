@@ -11,14 +11,19 @@
 			}
 			global $wpdb;
 			$subscribers = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}thfo_mailalert WHERE city = '$city' " );
-
+			//var_dump($subscribers); die;
 			$prices = get_post_meta( $post->ID, '_price' );
+			//var_dump($prices); die;
 
 			foreach ( $prices as $price ) {
+				//var_dump($price); die;
 				foreach ( $subscribers as $subscriber ) {
 					if ( $price <= $subscriber->max_price ) {
 						$mail = $subscriber->email;
-
+						//var_dump($mail); die;
+						thfo_send_mail($mail);
+					}else {
+						$mail = $subscriber->email;
 						thfo_send_mail($mail);
 					}
 				}
@@ -57,7 +62,4 @@
 
 		remove_filter( 'wp_mail_content_type', 'set_html_content_type' );
 
-		/*function set_html_content_type() {
-			return 'text/html';
-		}*/
 	}
