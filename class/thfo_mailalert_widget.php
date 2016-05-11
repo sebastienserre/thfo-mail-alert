@@ -39,10 +39,6 @@ class thfo_mailalert_widget extends WP_Widget {
 
 		$prices = get_option('thfo_max_price');
 		$prices = $this->multiexplode(array(',',', '), $prices);
-		//$prices = explode(', ', $prices);
-		//$prices = preg_split("/ (,|, ) /", $prices);
-		//$prices = explode(',', $prices);
-		//var_dump($prices);
 		?>
 
 		<form action="" method="post">
@@ -60,6 +56,14 @@ class thfo_mailalert_widget extends WP_Widget {
 					foreach ($city as $c){
 						$cities = $c->name; ?>
 						<option name="thfo_mailalert_city" value="<?php echo $cities ?>"><?php echo $cities ?></option>
+					<?php }
+					?>
+				</select>
+				<label for="thfo_mailalert_min_price"> <?php _e('Minimum Price', 'thfo-mail-alert') ?></label>
+				<select name="thfo_mailalert_min_price">
+					<?php
+					foreach ($prices as $price){ ?>
+						<option name="thfo_mailalert_min_price" value="<?php echo $price  ?>"><?php echo $price  ?>€</option>
 					<?php }
 					?>
 				</select>
