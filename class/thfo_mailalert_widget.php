@@ -61,8 +61,10 @@ class thfo_mailalert_widget extends WP_Widget {
 				</select>
 				<label for="thfo_mailalert_min_price"> <?php _e('Minimum Price', 'thfo-mail-alert') ?></label>
 				<select name="thfo_mailalert_min_price">
+					<option name="thfo_mailalert_min_price" value="0">0€</option>
 					<?php
 					foreach ($prices as $price){ ?>
+
 						<option name="thfo_mailalert_min_price" value="<?php echo $price  ?>"><?php echo $price  ?>€</option>
 					<?php }
 					?>
@@ -74,7 +76,7 @@ class thfo_mailalert_widget extends WP_Widget {
 						<option name="thfo_mailalert_price" value="<?php echo $price  ?>"><?php echo $price  ?>€</option>
 					<?php }
 					?>
-					<option name="thfo_mailalert_price" value="more"><?php _e('more', 'thfo-mail-alert') ?></option>
+					<option name="thfo_mailalert_price" value="more"><?php _e('Infinite', 'thfo-mail-alert') ?></option>
 				</select>
 				<label for="thfo_mailalert_room"> <?php _e('Room', 'thfo-mail-alert') ?></label>
 				<select name="thfo_mailalert_room">

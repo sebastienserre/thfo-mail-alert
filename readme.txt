@@ -38,6 +38,7 @@ use automatic upgrade
 3. Subscription widget
 
 == Changelog ==
+* 1.1.1 add min price choice in widget
 * 1.1.0 let admin choose max price
 * 1.0.8 fix mail bug from 1.0.7
 * 1.0.7 add mail content in html

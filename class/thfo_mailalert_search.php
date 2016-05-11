@@ -12,23 +12,17 @@
 			global $wpdb;
 			$subscribers = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}thfo_mailalert WHERE city = '$city' " );
 			//var_dump($subscribers); die;
-			$prices = get_post_meta( $post->ID, '_price' );
+			$prices = intval( get_post_meta( $post->ID, '_price' ));
 			//var_dump($prices); die;
 
-			foreach ( $prices as $price ) {
-				//var_dump($price); die;
+				var_dump($prices); //die;
 				foreach ( $subscribers as $subscriber ) {
-					if ( $price <= $subscriber->max_price ) {
-						$mail = $subscriber->email;
-						//var_dump($mail); die;
-						thfo_send_mail($mail);
-					}else {
+					if ( $prices <= $subscriber->max_price && $prices >= $subscriber->min_price ) {
 						$mail = $subscriber->email;
 						thfo_send_mail($mail);
 					}
+					}
 				}
-			}
-		}
 
 
 	}
