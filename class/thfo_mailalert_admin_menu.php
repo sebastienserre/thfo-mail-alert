@@ -205,9 +205,17 @@ class thfo_mailalert_admin_menu {
 
 
 		echo '<h2>' . get_admin_page_title() . '</h2>';
-		echo '<p>'; printf( _n('1 subscriber:','%s subscribers:',$count, 'thfo-mail-alert' ), number_format_i18n($count) ); echo '</p>';
+		if ($count == 0){
+			echo '<p>';
+			_e('0 subscriber', 'thfo-mail-alert');
+			echo '</p>';
+		} else {
 
-		?>
+			echo '<p>';
+			printf( _n( '1 subscriber:', '%s subscribers:', $count, 'thfo-mail-alert' ), number_format_i18n( $count ) );
+			echo '</p>';
+
+		}?>
 
 		<table class="thfo_subscriber" >
 			<tr>
