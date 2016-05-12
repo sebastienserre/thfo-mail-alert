@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f1046251-ff44-4587-8d82-b331230180f0" name="o2switch - Thivinfo" url="http://sebastie.odns.fr">
+        <fileTransfer host="sebastie.odns.fr" port="21" password="df9bdf99df9adf99dfe5df98dfd9dfdddfc3dfdedfc9dfc2df8e" username="sebastie">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
