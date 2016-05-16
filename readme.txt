@@ -33,9 +33,10 @@ WPCasa Mail Alert will display a widget to add a form on your Website using WPCa
 use automatic upgrade
 
 == Screenshots ==
-1. Subscriber list
-2. Plugin Options
-3. Subscription widget
+1. Widget
+2. Subscriber List
+3. General options
+4. E-mail Options
 
 == Changelog ==
 * 1.2.0 add min price choice in widget
