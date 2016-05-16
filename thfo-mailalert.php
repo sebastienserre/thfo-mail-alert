@@ -42,7 +42,7 @@ class thfo_mail_alert {
 	public function thfo_add_column() {
 		global $wpdb;
 		$table_name = $wpdb->prefix . 'thfo_mailalert';
-		$row = $wpdb->get_results( "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = $table_name AND COLUMN_NAME  = 'min_price' " );
+		$row = $wpdb->get_results( "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '$table_name' AND COLUMN_NAME  = 'min_price' " );
 		if (empty($row)) {
 			$wpdb->query( "ALTER TABLE $table_name ADD min_price VARCHAR (10) " );
 		}
