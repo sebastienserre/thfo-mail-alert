@@ -11,11 +11,7 @@
 			}
 			global $wpdb;
 			$subscribers = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}thfo_mailalert WHERE city = '$city' " );
-			//var_dump($subscribers); die;
 			$prices = intval( get_post_meta( $post->ID, '_price' ));
-			//var_dump($prices); die;
-
-				var_dump($prices); //die;
 				foreach ( $subscribers as $subscriber ) {
 					if ( $prices <= $subscriber->max_price && $prices >= $subscriber->min_price ) {
 						$mail = $subscriber->email;
@@ -39,13 +35,13 @@
 		$content = "";
 		$object = get_option('thfo_newsletter_object');
 		$img= get_option('empathy-setting-logo');
+		$content .= get_option('thfo_newsletter_content');
+		$content .= '<br /><a href="'.get_permalink().'"></a><br />';
+		$content .= $post->guid ."<br />";
 		$content .= '<img src="' . $img . '" alt="logo" />';
 		$content .= '<p>' . __('To unsubscribe to this mail please follow this link: ', 'thfo-mail-alert');
 		$url = get_option('thfo_unsubscribe_page');
 		$content .= esc_url(home_url($url.'?remove='.$recipient)) . '<p>';
-		$content .= get_option('thfo_newsletter_content');
-		$content .= '<br /><a href="'.get_permalink().'"></a><br />';
-		$content .= $post->guid ."<br />";
 		$content .= get_option('thfo_newsletter_footer');
 
 		$headers[] = 'Content-Type: text/html; charset=UTF-8';

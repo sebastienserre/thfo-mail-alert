@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="O2switch">
+  <component name="PublishConfigData" autoUpload="Always">
     <serverData>
-      <paths name="O2switch">
+      <paths name="o2switch - Thivinfo">
         <serverdata>
           <mappings>
-            <mapping deploy="/home/sebastie/public_html/dev/madani/wp-content/plugins/thfo-mail-alert" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/public_html/dev/madani/wp-content/plugins/thfo-mail-alert" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
