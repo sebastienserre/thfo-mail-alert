@@ -39,6 +39,7 @@ use automatic upgrade
 4. E-mail Options
 
 == Changelog ==
+* 1.2.1 unsubscribe link is now on bottom of e-mail
 * 1.2.0 add min price choice in widget
 * 1.1.0 let admin choose max price
 * 1.0.8 fix mail bug from 1.0.7
