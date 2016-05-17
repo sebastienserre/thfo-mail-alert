@@ -74,7 +74,7 @@
 		$content = "";
 		$object = get_option('thfo_newsletter_object');
 		$img= get_option('empathy-setting-logo');
-		$content .= '<img src="' . $img . '" alt="logo" />';
+		$content .= '<img src="' . $img . '" alt="logo" /><br />';
 		$content .= get_option('thfo_newsletter_content');
 		$content .= '<br /><a href="'.get_permalink().'"></a><br />';
 		$content .= $post->guid ."<br />";
