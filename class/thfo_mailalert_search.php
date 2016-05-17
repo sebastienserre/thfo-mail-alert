@@ -5,17 +5,56 @@
 		global $post;
 		$city = "";
 		if ( $post->post_type === 'property' ) {
+
+			/**
+			 * get city location
+			 **/
+
 			$terms = wp_get_object_terms( $post->ID, 'location' );
+
 			foreach ( $terms as $term ) {
 				$city = $term->name;
 			}
 			global $wpdb;
+
+			/**
+			 * get subcriber list for this city
+			 */
+
 			$subscribers = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}thfo_mailalert WHERE city = '$city' " );
-			$prices = intval( get_post_meta( $post->ID, '_price' ));
+
+			/**
+			 * get price from property
+			 */
+			$prices = get_post_meta( $post->ID, '_price' );
+
+			foreach ($prices as $p){
+				$price = (int)$p;
+			}
+
+			/**
+			 * get bedrooms number from property
+			 */
+
+			$rooms = get_post_meta( $post->ID, '_details_1' );
+
+			foreach ($rooms as $room){
+				$nb_room = (int)$room;
+			}
+			//$rooms = get_post_meta( $post->ID, '_details_1' );
+
+			/**
+			 * Search is running!
+			 */
 				foreach ( $subscribers as $subscriber ) {
-					if ( $prices <= $subscriber->max_price && $prices >= $subscriber->min_price ) {
-						$mail = $subscriber->email;
-						thfo_send_mail($mail);
+					if ( $price <= $subscriber->max_price && $price >= $subscriber->min_price ) {
+
+						if ($nb_room >= $subscriber->room) {
+							$mail = $subscriber->email;
+
+							//var_dump( $mail );
+							thfo_send_mail( $mail );
+						}
 					}
 					}
 				}
