@@ -3,7 +3,7 @@
 Plugin Name: Thfo Mail Alert
 Plugin URI: http://www.thivinfo.com
 Description: Allow Visitor to subscribe to a mail alert to receive a mail when a new property is added.
-Version: 1.2.1
+Version: 1.2.2
 Author: Sébastien Serre
 Author URI: http://www.thivinfo.com
 License: GPL2

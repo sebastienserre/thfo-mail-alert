@@ -35,10 +35,10 @@
 		$content = "";
 		$object = get_option('thfo_newsletter_object');
 		$img= get_option('empathy-setting-logo');
+		$content .= '<img src="' . $img . '" alt="logo" />';
 		$content .= get_option('thfo_newsletter_content');
 		$content .= '<br /><a href="'.get_permalink().'"></a><br />';
 		$content .= $post->guid ."<br />";
-		$content .= '<img src="' . $img . '" alt="logo" />';
 		$content .= '<p>' . __('To unsubscribe to this mail please follow this link: ', 'thfo-mail-alert');
 		$url = get_option('thfo_unsubscribe_page');
 		$content .= esc_url(home_url($url.'?remove='.$recipient)) . '<p>';
