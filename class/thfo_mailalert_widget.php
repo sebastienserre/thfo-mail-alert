@@ -13,6 +13,13 @@ class thfo_mailalert_widget extends WP_Widget {
 
 	}
 
+	/**
+	 * explode a string with multiple value separated by $delimiter
+	 * @param $delimiters
+	 * @param $string
+	 *
+	 * @return array|mixed|void
+	 */
 	public function multiexplode ($delimiters,$string) {
 
 		$ready = str_replace($delimiters, $delimiters[0], $string);
