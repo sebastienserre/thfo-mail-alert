@@ -31,7 +31,7 @@ class thfo_mailalert {
 	public function save_results() {
 
 		if ( isset( $_POST['thfo_mailalert'] ) ) {
-
+			do_action( 'thfo_before_saving_result' );
 			//var_dump($_POST);
 			global $wpdb;
 			$name  = sanitize_text_field($_POST['thfo_mailalert_name']);
@@ -55,7 +55,7 @@ class thfo_mailalert {
 				'subscription' => $date,
 				'min_price' => $minprice,
 			) );
-
+			do_action( 'thfo_after_saving_result' );
 		}
 	}
 

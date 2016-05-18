@@ -26,7 +26,13 @@ class thfo_mailalert_unsubscribe {
 			<input type="submit" name="delete" value="<?php _e('unsubscribe','thfo-mail-alert'); ?>" />
 		</form>
 		<?php
+
+		/**
+		 * fires before deleting a subscriber
+		 * @since 1.4.0
+		 */
 		do_action('thfo_before_deleting_subscriber');
+
 		if ( isset( $_POST['delete']) && ! empty( $_POST['delete']) )
 		{
 			if ( is_email($_POST['email'])){
@@ -41,8 +47,13 @@ class thfo_mailalert_unsubscribe {
 				<div class="thfo-mailalert-del"> <?php _e("Your mail address has been successfully deleted from our database","thfo-mail-alert"); ?> </div>
 			<?php }
 		}
+
+		/**
+		 * fires after deleting a subscriber
+		 * @since 1.4.0
+		 */
 		do_action('thfo_after_deleting_subscriber');
 
 	}
-	
+
 }

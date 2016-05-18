@@ -3,7 +3,7 @@
 Plugin Name: Thfo Mail Alert
 Plugin URI: http://www.thivinfo.com
 Description: Allow Visitor to subscribe to a mail alert to receive a mail when a new property is added.
-Version: 1.3.1
+Version: 1.4.0
 Author: Sébastien Serre
 Author URI: http://www.thivinfo.com
 License: GPL2
@@ -35,7 +35,7 @@ class thfo_mail_alert {
 		register_activation_hook(__FILE__, array('thfo_mailalert', 'install'));
 		register_uninstall_hook(__FILE__, array('thfo_mailalert', 'uninstall'));
 
-		define( 'PLUGIN_VERSION','1.3.1' );
+		define( 'PLUGIN_VERSION','1.4.0' );
 
 	}
 
@@ -46,11 +46,11 @@ class thfo_mail_alert {
 		if (empty($row)) {
 			$wpdb->query( "ALTER TABLE $table_name ADD min_price VARCHAR (10) " );
 		}
-		update_option( 'version', PLUGIN_VERSION );
+		update_option( 'thfo_mailalert_version', PLUGIN_VERSION );
 	}
 
 	public function thfo_update_db() {
-		$version = get_option( 'version' );
+		$version = get_option( 'thfo_mailalert_version' );
 //var_dump( $version ); die;
 		if ( $version != PLUGIN_VERSION ) {
 

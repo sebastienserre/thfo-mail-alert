@@ -24,6 +24,12 @@
 			$subscribers = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}thfo_mailalert WHERE city = '$city' " );
 
 			/**
+			 * @since 1.4.0
+			 * Fires after selecting subscribers
+			 */
+			$subscribers = apply_filters('thfo-get-subscriber-list', $subscribers);
+
+			/**
 			 * get price from property
 			 */
 			$prices = get_post_meta( $post->ID, '_price' );
@@ -46,11 +52,23 @@
 			/**
 			 * Search is running!
 			 */
+
+			/**
+			 * Fires before searching subscribers
+			 * @since 1.4.0
+			 */
+			do_action( 'thfo_before_search' );
+
 				foreach ( $subscribers as $subscriber ) {
 					if ( $price <= $subscriber->max_price && $price >= $subscriber->min_price ) {
 
 						if ($nb_room >= $subscriber->room) {
 							$mail = $subscriber->email;
+
+							/**
+							 * @since 1.4.0
+							 * Fires after mail list created and before sending mail
+							 */
 
 							//var_dump( $mail );
 							thfo_send_mail( $mail );
@@ -87,7 +105,21 @@
 
 		$headers[] = 'From:'.$sender.'<'.$sender_mail.'>';
 
+		/**
+		 * @since 1.4.0
+		 * Fires before sending mail
+		 */
+
+		do_action( 'thfo_before_sending_mail' );
+
 		$result = wp_mail($recipient, $object, $content, $headers);
+
+		/**
+		 * @since 1.4.0
+		 * Fires immediatly after sending mail
+		 */
+
+		do_action('thfo_after_sending_mail');
 
 		remove_filter( 'wp_mail_content_type', 'set_html_content_type' );
 

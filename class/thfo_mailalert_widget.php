@@ -94,11 +94,6 @@ class thfo_mailalert_widget extends WP_Widget {
 					<option name="thfo_mailalert_room" value="3">3</option>
 					<option name="thfo_mailalert_room" value="4">4</option>
 					<option name="thfo_mailalert_room" value="5">5</option>
-					<option name="thfo_mailalert_room" value="6">6</option>
-					<option name="thfo_mailalert_room" value="7">7</option>
-					<option name="thfo_mailalert_room" value="8">8</option>
-					<option name="thfo_mailalert_room" value="9">9</option>
-					<option name="thfo_mailalert_room" value="10">10</option>
 				</select>
 			</p>
 			<input name="thfo_mailalert" class="moretag btn btn-primary" type="submit" />
