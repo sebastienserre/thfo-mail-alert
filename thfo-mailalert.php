@@ -51,7 +51,7 @@ class thfo_mail_alert {
 
 	public function thfo_update_db() {
 		$version = get_option( 'thfo_mailalert_version' );
-//var_dump( $version ); die;
+		
 		if ( $version != PLUGIN_VERSION ) {
 
 			$this->thfo_add_column();
