@@ -17,6 +17,8 @@ class thfo_mailalert_widget extends WP_Widget {
 
 		$ready = str_replace($delimiters, $delimiters[0], $string);
 		$launch = explode($delimiters[0], $ready);
+
+		$launch = apply_filters('thfo_mutliexplode', $launch);
 		return  $launch;
 	}
 
