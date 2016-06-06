@@ -1,0 +1,30 @@
+Index: thfo-mailalert.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- thfo-mailalert.php	(date 1463063588000)
++++ thfo-mailalert.php	(revision )
+@@ -28,7 +28,7 @@
+ 		add_action( 'plugins_loaded', array( $this, 'thfo_load_textdomain' ) );
+ 		add_action( 'admin_init', array($this, 'thfo_register_admin_style') );
+ 		add_action( 'admin_init', array($this, 'thfo_check_theme') );
+-		add_action( 'admin_init', array($this, 'thfo_update_db') );
++		add_action( 'admin_init', array($this, 'thfo_add_column') );
+ 		add_action('admin_notice', array($this,'thfo_wpcasa_missing_notice' ));
+ 		add_action( 'wp_enqueue_scripts', array($this, 'thfo_register_style') );
+ 
+@@ -42,7 +42,11 @@
+ 	public function thfo_add_column() {
+ 		global $wpdb;
+ 		$table_name = $wpdb->prefix . 'thfo_mailalert';
+-		$row = $wpdb->get_results( "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = $table_name AND COLUMN_NAME  = 'min_price' " );
++		//var_dump( $table_name ); die;
++		$row = $wpdb->get_results( "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = $table_name AND COLUMN_NAME  = 'min_price' " , 'array');
++		$error = $wpdb->last_error;
++		//$row = $wpdb->get_col( "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = $table_name AND COLUMN_NAME  = 'min_price' " , 'array');
++		var_dump( $error ); die;
+ 		if (empty($row)) {
+ 			$wpdb->query( "ALTER TABLE $table_name ADD min_price VARCHAR (10) " );
+ 		}
+\ No newline at end of file

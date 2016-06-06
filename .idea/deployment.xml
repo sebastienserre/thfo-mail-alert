@@ -5,7 +5,7 @@
       <paths name="o2switch - Thivinfo">
         <serverdata>
           <mappings>
-            <mapping deploy="/public_html/dev/madani/wp-content/plugins/thfo-mail-alert" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/public_html/dev/sandbox_wp/wp-content/plugins/thfo-mail-alert" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
