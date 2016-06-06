@@ -1,4 +1,4 @@
-=== WPCasa Mail Alert ===
+=== WPCasa Mail Alert Legacy===
 
 
 Contributors: sebastien@thivinfo.com
@@ -39,6 +39,7 @@ use automatic upgrade
 4. E-mail Options
 
 == Changelog ==
+* 1.4.0 Renamed Plugins
 * 1.4.0 Developer improvment by adding Hooks & comments
 * 1.3.0 Add Search by bedrooms number
 * 1.2.2 Correct logo placement
