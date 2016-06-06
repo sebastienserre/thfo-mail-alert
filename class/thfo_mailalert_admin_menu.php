@@ -10,7 +10,7 @@ class thfo_mailalert_admin_menu {
 	function __construct() {
 
 		add_action('admin_menu', array($this, 'thfo_admin_menu'));
-		add_action('admin_menu', array($this, 'thfo_delete_subscriber'));
+		add_action('admin_menu', array($this, 'wppu_delete_subscriber'));
 		add_action('admin_init', array($this, 'register_settings'));
 	}
 
@@ -242,7 +242,7 @@ class thfo_mailalert_admin_menu {
 						$url .= basename(dirname( __DIR__));
 						$url .= '&id='. $id .'&delete=yes';
 						?>
-						<a href="<?php echo esc_url($url); ?>" title="<?php _e('Delete', 'thfo-mail-alert') ?>"><span class="dashicons dashicons-trash"></span> </a> </td>
+						<a href="<?php echo esc_url($url); ?>" title="<?php _e('Delete', 'wp-post-updated') ?>"><span class="dashicons dashicons-trash"></span> </a> </td>
 
 				</tr>
 
@@ -253,7 +253,7 @@ class thfo_mailalert_admin_menu {
 
 	<?php }
 
-	public function thfo_delete_subscriber(){
+	public function wppu_delete_subscriber(){
 		if (isset($_GET['delete']) && $_GET['delete'] == 'yes'){
 			$id = $_GET['id'];
 			global $wpdb;

@@ -3,7 +3,7 @@
 Plugin Name: Thfo Mail Alert
 Plugin URI: http://www.thivinfo.com
 Description: Allow Visitor to subscribe to a mail alert to receive a mail when a new property is added.
-Version: 1.4.0
+Version: 2.0.0
 Author: Sébastien Serre
 Author URI: http://www.thivinfo.com
 License: GPL2
@@ -29,13 +29,13 @@ class thfo_mail_alert {
 		add_action( 'admin_init', array($this, 'thfo_register_admin_style') );
 		add_action( 'admin_init', array($this, 'thfo_check_theme') );
 		add_action( 'admin_init', array($this, 'thfo_update_db') );
-		add_action('admin_notice', array($this,'thfo_wpcasa_missing_notice' ));
+		add_action( 'admin_init', array($this, 'thfo_check_wpcasa') );
 		add_action( 'wp_enqueue_scripts', array($this, 'thfo_register_style') );
 
 		register_activation_hook(__FILE__, array('thfo_mailalert', 'install'));
 		register_uninstall_hook(__FILE__, array('thfo_mailalert', 'uninstall'));
 
-		define( 'PLUGIN_VERSION','1.4.0' );
+		define( 'PLUGIN_VERSION','2.0.0' );
 
 	}
 
@@ -47,6 +47,14 @@ class thfo_mail_alert {
 			$wpdb->query( "ALTER TABLE $table_name ADD min_price VARCHAR (10) " );
 		}
 		update_option( 'thfo_mailalert_version', PLUGIN_VERSION );
+	}
+
+	public function thfo_check_wpcasa(){
+		if (class_exists('WPSight_Framework')){
+			echo 'WPCasa OK';
+		}else {
+			echo 'WPCasa KO';
+		}
 	}
 
 	public function thfo_update_db() {
@@ -71,24 +79,19 @@ class thfo_mail_alert {
 	}
 
 	public function thfo_check_theme(){
-		$themes = wp_get_theme('wpcasa');
 
-		if ( ! $themes->exists() ){
-			$wpcasa_exists = 0;
-			update_option('wp_casa_exists', $wpcasa_exists);
-		}
-	}
-
-	public function thfo_wpcasa_missing_notice(){
-		$wpcasa = get_option('wp_casa_exists');
-
-		if ($wpcasa === '0') {
+		if(!function_exists('wpsight_constants')){
 			$class   = 'notice notice-error';
-			$message = __( 'WPCasa Framework isn\'t available in your installation! <br />', 'thfo-mail-alert' );
-			$message .= __( 'This plugin needs it to properly work', 'thfo-mail-alert' );
+			$message = __( 'WPCasa Framework theme isn\'t available in your installation! <br />', 'thfo-mail-alert' );
+			$message .= __( 'This plugin needs it to properly work but no more developped! ', 'thfo-mail-alert' );
+			$message .= __( 'WPCasa is now a plugin. It can be downloaded here:', 'thfo-mail-alert' );
+			$url = home_url('wp-admin/plugin-install.php?tab=search&s=wpcasa');
+			$message .= '<a href="'.$url.'">'. __('WPCasa plugin in the WordPress repository', 'thfo-mail-alert');
 			echo '<div class=" ' .$class. ' "><p> '. $message.' </p></div>';
 		}
+
 	}
+
 
 
 }
