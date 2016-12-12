@@ -1,12 +1,13 @@
 <?php
 /*
-Plugin Name: Thfo Mail Alert Legacy
+Plugin Name: WPCasa Mail Alert
 Plugin URI: http://www.thivinfo.com
-Description: Allow Visitor to subscribe to a mail alert to receive a mail when a new property is added. Support the WPCasa Legacy Framework.
-Version: 1.4.1
+Description: Allow Visitor to subscribe to a mail alert to receive a mail when a new property is added.
+Version: 1.4.3
 Author: Sébastien Serre
 Author URI: http://www.thivinfo.com
 License: GPL2
+Tested up to: 4.7
 Text Domain: thfo-mail-alert
 Domain Path: /languages
 */
@@ -35,7 +36,7 @@ class thfo_mail_alert {
 		register_activation_hook(__FILE__, array('thfo_mailalert', 'install'));
 		register_uninstall_hook(__FILE__, array('thfo_mailalert', 'uninstall'));
 
-		define( 'PLUGIN_VERSION','1.4.0' );
+		define( 'PLUGIN_VERSION','1.4.3' );
 
 	}
 

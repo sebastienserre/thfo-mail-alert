@@ -1,12 +1,12 @@
-=== WPCasa Mail Alert Legacy===
+=== WPCasa Mail Alert ===
 
 
 Contributors: sebastien@thivinfo.com
 Donate link: http://paypal.me/sebastienserre
 Tags: wpcasa, update, post, mail, subscription, notifier, status, alert, translation ready
 Requires at least: 3.9
-Tested up to: 4.5
-Stable tag: 1.4.0
+Tested up to: 4.7
+Stable tag: 1.4.3
 License: GPL V2 or later
 
 == Description ==
@@ -28,6 +28,9 @@ WPCasa Mail Alert will display a widget to add a form on your Website using WPCa
 = Do I need to remove something after de-acivation and deletion of this plugin? =
 * I'm sorry you leave. The plugin is deleting all DB created by the plugin activation. You only have to manually delete the unsubscribe page.
 
+= Is the Bedrooms number a minimum in the search?
+* Yes!
+
 == Upgrade Notice ==
 
 use automatic upgrade
@@ -39,7 +42,9 @@ use automatic upgrade
 4. E-mail Options
 
 == Changelog ==
-* 1.4.0 Renamed Plugins
+* 1.4.3 Minor bugfix and code cleaning
+* 1.4.2 OK With WP 4.7
+* 1.4.1 OK With WP 4.6.1
 * 1.4.0 Developer improvment by adding Hooks & comments
 * 1.3.0 Add Search by bedrooms number
 * 1.2.2 Correct logo placement
