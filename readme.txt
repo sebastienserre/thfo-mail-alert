@@ -34,7 +34,7 @@ WARNING - This Plugins is working with old WPCasa Theme framework
 
 = is this plugin working with the WPCasa Plugin? =
 * No! This plugin is working with the old WPCasa Framework.
-* A premium version exists [HERE](https://www.thivinfo.com/downloads/wpcasa-mail-alert-pro/).
+* A premium version working with the plugin exists [HERE](https://www.thivinfo.com/downloads/wpcasa-mail-alert-pro/).
 
 == Upgrade Notice ==
 
