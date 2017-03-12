@@ -6,7 +6,7 @@ Donate link: http://paypal.me/sebastienserre
 Tags: wpcasa, update, post, mail, subscription, notifier, status, alert, translation ready
 Requires at least: 3.9
 Tested up to: 4.7
-Stable tag: 1.4.5
+Stable tag: 1.4.5.1
 License: GPL V2 or later
 
 == Description ==
