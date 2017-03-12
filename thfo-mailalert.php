@@ -1,9 +1,10 @@
 <?php
 /*
-Plugin Name: WPCasa Mail Alert
+Plugin Name: WPCasa Mail Alert legacy
 Plugin URI: http://www.thivinfo.com
 Description: Allow Visitor to subscribe to a mail alert to receive a mail when a new property is added.
-Version: 1.4.3
+WARNING - This Plugins is working with old WPCasa Theme framework
+Version: 1.4.4
 Author: Sébastien Serre
 Author URI: http://www.thivinfo.com
 License: GPL2

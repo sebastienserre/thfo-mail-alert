@@ -1,4 +1,4 @@
-=== WPCasa Mail Alert ===
+=== WPCasa Mail Alert Legacy===
 
 
 Contributors: sebastien@thivinfo.com
@@ -6,11 +6,12 @@ Donate link: http://paypal.me/sebastienserre
 Tags: wpcasa, update, post, mail, subscription, notifier, status, alert, translation ready
 Requires at least: 3.9
 Tested up to: 4.7
-Stable tag: 1.4.3
+Stable tag: 1.4.4
 License: GPL V2 or later
 
 == Description ==
 WPCasa Mail Alert will display a widget to add a form on your Website using WPCasa Framework from WPSIght. Once registred, you'll receive a mail when the RealEstate Agency will add or update a property corresponding to your search!
+WARNING - This Plugins is working with old WPCasa Theme framework
 
 == Installation ==
 * 1- unzip
@@ -28,8 +29,11 @@ WPCasa Mail Alert will display a widget to add a form on your Website using WPCa
 = Do I need to remove something after de-acivation and deletion of this plugin? =
 * I'm sorry you leave. The plugin is deleting all DB created by the plugin activation. You only have to manually delete the unsubscribe page.
 
-= Is the Bedrooms number a minimum in the search?
+= Is the Bedrooms number a minimum in the search? =
 * Yes!
+
+= is this plugin working with the WPCasa Plugin? =
+* No! This plugin is working with the old WPCasa Framework. A version working with the "new" wpcasa plugin is currently in development.
 
 == Upgrade Notice ==
 
@@ -42,6 +46,7 @@ use automatic upgrade
 4. E-mail Options
 
 == Changelog ==
+* 1.4.4 Add info in readme.
 * 1.4.3 Minor bugfix and code cleaning
 * 1.4.2 OK With WP 4.7
 * 1.4.1 OK With WP 4.6.1
