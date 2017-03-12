@@ -6,7 +6,7 @@ Donate link: http://paypal.me/sebastienserre
 Tags: wpcasa, update, post, mail, subscription, notifier, status, alert, translation ready
 Requires at least: 3.9
 Tested up to: 4.7
-Stable tag: 1.4.4
+Stable tag: 1.4.5
 License: GPL V2 or later
 
 == Description ==
@@ -34,6 +34,7 @@ WARNING - This Plugins is working with old WPCasa Theme framework
 
 = is this plugin working with the WPCasa Plugin? =
 * No! This plugin is working with the old WPCasa Framework. A version working with the "new" wpcasa plugin is currently in development.
+But a premium version exists [here](https://www.thivinfo.com/downloads/wpcasa-mail-alert-pro/).
 
 == Upgrade Notice ==
 
