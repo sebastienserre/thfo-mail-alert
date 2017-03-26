@@ -1,17 +1,17 @@
 === WPCasa Mail Alert Legacy===
-
-
+Plugin Name: WPCasa Mail Alert
+Plugin URI: https://www.thivinfo.com/downloads/wpcasa-mail-alert-pro/
 Contributors: sebastien@thivinfo.com
 Donate link: http://paypal.me/sebastienserre
 Tags: wpcasa, update, post, mail, subscription, notifier, status, alert, translation ready
 Requires at least: 3.9
-Tested up to: 4.7
-Stable tag: 1.4.5.1
+Tested up to: 4.7.3
+Stable tag: 1.4.6
 License: GPL V2 or later
 
 == Description ==
 WPCasa Mail Alert will display a widget to add a form on your Website using WPCasa Framework from WPSIght. Once registred, you'll receive a mail when the RealEstate Agency will add or update a property corresponding to your search!
-WARNING - This Plugins is working with old WPCasa Theme framework
+WARNING - This Plugins is working with old WPCasa Theme framework. A premium version working with the plugin exists [HERE](https://www.thivinfo.com/downloads/wpcasa-mail-alert-pro/).
 
 == Installation ==
 * 1- unzip
@@ -32,9 +32,13 @@ WARNING - This Plugins is working with old WPCasa Theme framework
 = Is the Bedrooms number a minimum in the search? =
 * Yes!
 
-= is this plugin working with the WPCasa Plugin? =
+= Is this plugin working with the WPCasa Plugin? =
 * No! This plugin is working with the old WPCasa Framework.
-* A premium version working with the plugin exists [HERE](https://www.thivinfo.com/downloads/wpcasa-mail-alert-pro/).
+* Another version working with the plugin exists [HERE](https://wordpress.org/plugins/wpcasa-mail-alert/).
+
+= Is this version allways developped? =
+* Not! I can't maintain 2 similars plugins. WPSight has decided to migrate from a Framework to a plugin and I will maintain my other version, working with the  current WPCasa plugin version.
+
 
 == Upgrade Notice ==
 
@@ -47,6 +51,8 @@ use automatic upgrade
 4. E-mail Options
 
 == Changelog ==
+
+* 1.4.6 Link to new Plugin // End Of Life of this one // no new functionality
 * 1.4.4 Add info in readme.
 * 1.4.3 Minor bugfix and code cleaning
 * 1.4.2 OK With WP 4.7

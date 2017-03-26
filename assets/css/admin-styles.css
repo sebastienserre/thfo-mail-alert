@@ -9,3 +9,11 @@
     text-align: center;
     display: block;
 }
+
+.wpcasama-promo {
+    font-size: 2rem;
+    background: white;
+    width: 60%;
+    padding: 1%;
+    margin-top: 10px;
+}

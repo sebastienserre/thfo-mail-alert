@@ -84,8 +84,18 @@ class thfo_mailalert_admin_menu {
 		$max_price = get_option('thfo_max_price')?>
 		<input name="thfo_max_price" id="thfo_max_price" type="text" value="<?php if ( !empty($max_price)) : echo $max_price; endif ?>">
 		<p><?php _e('Please enter maximum price separated by a comma','thfo_mail_alert') ?></p>
+<?php
+        /**
+        * Promo for Plugin version
+        */
 
-	<?php }
+        $url = 'https://wordpress.org/plugins/wpcasa-mail-alert/';
+        $value = '<div class="wpcasama-promo"> ';
+            $value .= sprintf( wp_kses( __( 'A version working with the WPCasa plugin exists <a href="%s">Here</a>.', 'thfo-mail-alert' ), array(  'a' => array( 'href' => array() ) ) ), esc_url( $url ) );
+            $value .= '</div>';
+        $value = apply_filters( 'link_to_pro_version', $value );
+        echo $value;
+	}
 
 	public function general_section_html(){
 		echo '<p>'.__('Select your options','thfo-mail-alert').'</p>';
@@ -205,7 +215,7 @@ class thfo_mailalert_admin_menu {
 
 
 		echo '<h2>' . get_admin_page_title() . '</h2>';
-		echo '<p>'; printf( _n('1 subscriber:','%s subscribers:',$count, 'thfo-mail-alert' ), number_format_i18n($count) ); echo '</p>';
+		echo '<p>'; printf( _n('%s subscriber:','%s subscribers:',$count, 'thfo-mail-alert' ), number_format_i18n($count) ); echo '</p>';
 
 		?>
 
