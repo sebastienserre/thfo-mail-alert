@@ -1,17 +1,20 @@
-=== WPCasa Mail Alert Legacy===
+=== WPCasa Mail Alert Legacy -- Not maintened ===
 Plugin Name: WPCasa Mail Alert
 Plugin URI: https://www.thivinfo.com/downloads/wpcasa-mail-alert-pro/
-Contributors: sebastien@thivinfo.com
+Contributors: sebastienserre
 Donate link: http://paypal.me/sebastienserre
 Tags: wpcasa, update, post, mail, subscription, notifier, status, alert, translation ready
 Requires at least: 3.9
 Tested up to: 4.7.3
-Stable tag: 1.4.6
+Stable tag: 1.4.7
 License: GPL V2 or later
 
 == Description ==
-WPCasa Mail Alert will display a widget to add a form on your Website using WPCasa Framework from WPSIght. Once registred, you'll receive a mail when the RealEstate Agency will add or update a property corresponding to your search!
-WARNING - This Plugins is working with old WPCasa Theme framework. A premium version working with the plugin exists [HERE](https://www.thivinfo.com/downloads/wpcasa-mail-alert-pro/).
+WPCasa Mail Alert will display a widget to add a form on your Website using WPCasa Framework from WPSight. Once registered, you'll receive a mail when the RealEstate Agency will add or update a property corresponding to your search!
+
+WARNING - This Plugin is working only with old WPCasa Theme framework. A premium version working with the plugin exists [HERE](https://www.thivinfo.com/).
+WARNING BIS - This plugin is no longer maintened. Please consider to not install it and install the new version, working with Old Framework WPCasa and WPCasa Plugin.
+[DOWNLOAD THE NEW VERSION HERE](https://wordpress.org/plugins/wpcasa-mail-alert/)
 
 == Installation ==
 * 1- unzip
@@ -26,7 +29,7 @@ WARNING - This Plugins is working with old WPCasa Theme framework. A premium ver
 = Is my subscriber can easily unsubscribe to the mail? =
 * Yes! They have to click on the link present on all mail received or make a link somewhere to the unsubscribe page created at the plugin activation.
 
-= Do I need to remove something after de-acivation and deletion of this plugin? =
+= Do I need to remove something after de-activation and deletion of this plugin? =
 * I'm sorry you leave. The plugin is deleting all DB created by the plugin activation. You only have to manually delete the unsubscribe page.
 
 = Is the Bedrooms number a minimum in the search? =
@@ -52,6 +55,7 @@ use automatic upgrade
 
 == Changelog ==
 
+* 1.4.7 Add link to new plugin in bold ;-)
 * 1.4.6 Link to new Plugin // End Of Life of this one // no new functionality
 * 1.4.4 Add info in readme.
 * 1.4.3 Minor bugfix and code cleaning
