@@ -4,7 +4,7 @@ Plugin Name: WPCasa Mail Alert legacy
 Plugin URI: https://www.thivinfo.com/downloads/wpcasa-mail-alert-pro/
 Description: <strong>Do not Use me anymore -- This plugin is not maintened.</strong><br/> Please remove me and add the new one : <a href="https://wordpress.org/plugins/wpcasa-mail-alert/">WPCasa Mail Alert</a>
 WARNING - This Plugins is working with old WPCasa Theme framework - A Premium version working with the WPCasa plugin exists.
-Version: 1.4.7
+Version: 1.5.0
 Author: Sébastien Serre
 Author URI: http://www.thivinfo.com
 License: GPL2
@@ -34,10 +34,12 @@ class thfo_mail_alert {
 		add_action('admin_notice', array($this,'thfo_wpcasa_missing_notice' ));
 		add_action( 'wp_enqueue_scripts', array($this, 'thfo_register_style') );
 
+		add_action( 'admin_notices', array( $this, 'thfo_wpcasa_admin_notice_deprecated_notice' ) );
+
 		register_activation_hook(__FILE__, array('thfo_mailalert', 'install'));
 		register_uninstall_hook(__FILE__, array('thfo_mailalert', 'uninstall'));
 
-		define( 'PLUGIN_VERSION','1.4.7' );
+		define( 'PLUGIN_VERSION','1.5.0' );
 
 	}
 
@@ -53,7 +55,7 @@ class thfo_mail_alert {
 
 	public function thfo_update_db() {
 		$version = get_option( 'thfo_mailalert_version' );
-		
+
 		if ( $version != PLUGIN_VERSION ) {
 
 			$this->thfo_add_column();
@@ -90,6 +92,21 @@ class thfo_mail_alert {
 			$message .= __( 'This plugin needs it to properly work', 'thfo-mail-alert' );
 			echo '<div class=" ' .$class. ' "><p> '. $message.' </p></div>';
 		}
+	}
+
+	/**
+	 * Admin Notice on Activation.
+	 * @since 0.1.0
+	 */
+	public function thfo_wpcasa_admin_notice_deprecated_notice(){
+
+		?>
+			<div class="updated notice is-dismissible">
+				<p><?php _e( 'Thank you for using WPCasa Mail Alert legacy! <strong>Unfortunately developpement is stopped </strong>', 'thfo-mail-alert'); ?>.</p>
+				<p><?php _e( '<strong>This is the last update to ask you installing the new one</strong>', 'thfo-mail-alert'); ?>.</p>
+				<a href="https://wordpress.org/plugins/wpcasa-mail-alert/" target="_blank" ><?php _e( 'Download the new version working with the WPCasa Plugin & (old) Framework', 'thfo-mail-alert' ); ?></a>
+			</div>
+			<?php
 	}
 
 
